@@ -6,7 +6,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 """
-Connect the googlesheet for this project using Google APIs
+Connect the Googlesheet for this project using Google APIs
 """
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -19,9 +19,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('shoes')
 
-shoe_list = SHEET.worksheet('shoe_list')
+shoe_list = SHEET.worksheet('shoe_list').get_all_values()
 
-data = shoe_list.get_all_values()
-
-print(data)
+print(shoe_list)
 
