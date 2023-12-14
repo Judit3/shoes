@@ -69,6 +69,8 @@ def print_shoe_info():
     else:
         print("Sorry, brand not found")
 
+    select_what_to_do()
+
 
 def copy_to_shopping():
     """ 
@@ -82,5 +84,45 @@ def copy_to_shopping():
     else:
         print("Sorry, brand not found\n")
 
-shoe_info = print_shoe_info()
-update_shopping = copy_to_shopping()
+    select_what_to_do()
+
+
+def exit_program():
+    """
+    Allows the users to exit the program
+    """
+    confirm_exit = input("Confirm exit (Y/N):\n")
+    
+    if confirm_exit == "Y":
+        print("Exiting program...\n")
+        print("To start again, please, press Run Program button avobe\n")
+        exit()
+    elif confirm_exit == "N":
+        print("Great!\n")
+        select_what_to_do()
+    else:
+        print("INVALID INPUT, please, enter Y or N in capital letters\n")
+        exit_program()
+
+def select_what_to_do():
+    """
+    Allow users to select what they want to do among the functionalities of the program
+    """
+    print("Welcome to SHOES\n")
+    print("How can we help you?\n")
+    print("1 - Shoe information by brand\n")
+    print("2 - Add shoe to the shopping list\n")
+    print("3 - Exit the program\n")
+
+    what_to_do_input = input("Please, enter the numbers of one of the previous options:\n")
+
+    if what_to_do_input == "1":
+        print_shoe_info()
+    elif what_to_do_input == "2":
+        copy_to_shopping()
+    elif what_to_do_input == "3":
+        exit_program()
+
+select_what_to_do()
+
+
