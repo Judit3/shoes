@@ -5,7 +5,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
-
 # Connect the Googlesheet for this project using Google APIs
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -27,7 +26,7 @@ brands = SHEET.worksheet('shoe_list').col_values(1)
 descriptions = SHEET.worksheet('shoe_list').col_values(2)
 prices = SHEET.worksheet('shoe_list').col_values(3)
 
-#Global varaible to track wether the program is running for the first time
+#Global varaible to track whether the program is running for the first time
 program_has_run = False
 
 class Brand:
