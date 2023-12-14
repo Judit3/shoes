@@ -42,11 +42,20 @@ class Brand:
 
     def show_information(self):
         """
-        Gives format for shoe info to print
+        Gives format for shoe information to print
         """
         print(f"Brand: {self.brand_name}\n")
         print(f"Description: {self.shoe_description}\n")
         print(f"Price: {self.shoe_price}\n")
+
+    def append_row(self):
+        """
+        Appends the brand information to the 'shopping' worksheet
+        """
+        shopping_sheet = SHEET.worksheet('shopping')
+        shopping_sheet.append_row([self.brand_name, self.shoe_description, self.shoe_price])
+        print("Brand information copied to 'shopping' worksheet.\n")
+
 
 def print_shoe_info():
     """ 
@@ -60,3 +69,18 @@ def print_shoe_info():
     else:
         print("Sorry, brand not found")
 
+
+def copy_to_shopping():
+    """ 
+    Allows the user to enter the name of the shoe brand and copies the information to the 'shopping' worksheet
+    """
+    brand_name = input("Please enter the shoe brand that you would like to buy (as seen on the spreadsheet): \n")
+
+    if brand_name in SHEET.worksheet("shoe_list").col_values(1):
+        my_brand = Brand(brand_name)
+        my_brand.append_row()
+    else:
+        print("Sorry, brand not found\n")
+
+shoe_info = print_shoe_info()
+update_shopping = copy_to_shopping()
