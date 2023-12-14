@@ -19,6 +19,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('shoes')
 
 shoe_list = SHEET.worksheet('shoe_list').get_all_values()
+shopping_sheet = SHEET.worksheet('shopping')
 
 # Define variables to target the columns in the spreadsheet to access them in the functions
 
@@ -54,7 +55,6 @@ class Brand:
         """
         Appends the brand information to the 'shopping' worksheet
         """
-        shopping_sheet = SHEET.worksheet('shopping')
         shopping_sheet.append_row([self.brand_name, self.shoe_description, self.shoe_price])
         print("Brand information copied to 'shopping' worksheet.\n")
 
@@ -89,6 +89,22 @@ def copy_to_shopping():
     select_what_to_do()
 
 
+def sum_shopping_price():
+    """ 
+    Allows to sum the values in the price column into the shopping list
+    """
+    priece_values = (shopping_sheet.col_values(3))
+
+    priece_values_converted = []
+    for priece_value in priece_values[1:]:
+        priece_values_converted.append(int(priece_value))
+    
+    total = sum(priece_values_converted)
+    print(f"Total: {total}\n")
+    
+    shopping_sheet.update_cell(2, 4, total)
+
+
 def exit_program():
     """
     Allows the users to exit the program
@@ -106,6 +122,7 @@ def exit_program():
         print("INVALID INPUT, please, enter Y or N in capital letters\n")
         exit_program()
 
+
 def select_what_to_do():
     """
     Allow users to select what they want to do among the functionalities of the program
@@ -118,16 +135,21 @@ def select_what_to_do():
     print("How can we help you?\n")
     print("1 - Shoe information by brand\n")
     print("2 - Add shoe to the shopping list\n")
-    print("3 - Exit the program\n")
+    print("3 - Calculate the total price of your shopping list\n")
+    print("4 - Exit the program\n")
+   
 
-    what_to_do_input = input("Please, enter the numbers of one of the options above:\n")
+    what_to_do_input = input("Please, enter the number of one of the options above:\n")
 
     if what_to_do_input == "1":
         print_shoe_info()
     elif what_to_do_input == "2":
         copy_to_shopping()
     elif what_to_do_input == "3":
+        sum_shopping_price()
+    elif what_to_do_input == "4":
         exit_program()
+
 
 select_what_to_do()
 
