@@ -26,6 +26,8 @@ brands = SHEET.worksheet('shoe_list').col_values(1)
 descriptions = SHEET.worksheet('shoe_list').col_values(2)
 prices = SHEET.worksheet('shoe_list').col_values(3)
 
+#Global varaible to track wether the program is running for the first time
+program_has_run = False
 
 class Brand:
     """
@@ -95,7 +97,7 @@ def exit_program():
     
     if confirm_exit == "Y":
         print("Exiting program...\n")
-        print("To start again, please, press Run Program button avobe\n")
+        print("To start again, please, click the Run Program button above\n")
         exit()
     elif confirm_exit == "N":
         print("Great!\n")
@@ -108,13 +110,17 @@ def select_what_to_do():
     """
     Allow users to select what they want to do among the functionalities of the program
     """
-    print("Welcome to SHOES\n")
+    global program_has_run
+    if not program_has_run:
+        print("Welcome to SHOES\n")
+        program_has_run = True
+
     print("How can we help you?\n")
     print("1 - Shoe information by brand\n")
     print("2 - Add shoe to the shopping list\n")
     print("3 - Exit the program\n")
 
-    what_to_do_input = input("Please, enter the numbers of one of the previous options:\n")
+    what_to_do_input = input("Please, enter the numbers of one of the options above:\n")
 
     if what_to_do_input == "1":
         print_shoe_info()
