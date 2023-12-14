@@ -105,6 +105,28 @@ def sum_shopping_price():
     shopping_sheet.update_cell(2, 4, total)
 
 
+def delete_row_in_shopping():
+    """
+    Allows the user to clear the content of one row in the shopping worksheet by brand name
+    """
+    brand_name = input("Please, enter the name on the brand you want to delete from your shopping list: \n")
+    
+    if brand_name in SHEET.worksheet("shopping").col_values(1):
+        brand_column = shopping_sheet.col_values(1)
+        row_index = brand_column.index(brand_name) + 1
+    
+        confirm_deletion = input(f"Do you want to delete the brand {brand_name} form your shopping list? (Y/N):\n")
+        if confirm_deletion == "Y":
+            shopping_sheet.delete_rows(row_index)
+            print(f"Row for brand {brand_name} has been deleted.\n")
+        elif confirm_deletion == "N":
+            print("Great!\n")
+            select_what_to_do()
+        else:
+            print("INVALID INPUT, please, enter Y or N in capital letters.\n")
+            delete_row_in_shopping()
+
+
 def clear_shopping_worksheet():
     """
     Allows the user to clear the content of the shopping worksheet 
@@ -113,7 +135,9 @@ def clear_shopping_worksheet():
 
     if confirm_clearance == "Y":
         print("Shopping list has been emptied.\n")
+        headings = shopping_sheet.row_values(1)
         shopping_sheet.clear()
+        shopping_sheet.append_row(headings)
     elif confirm_clearance == "N":
         print("Great!\n")
         select_what_to_do()
@@ -153,8 +177,9 @@ def select_what_to_do():
     print("1 - Shoe information by brand\n")
     print("2 - Add shoe to the shopping list\n")
     print("3 - Calculate the total price of your shopping list\n")
-    print("4 - Clear the content of the shopping list\n")
-    print("5 - Exit the program\n")
+    print("4 - Delete one brand row form the shopping list\n")
+    print("5 - Clear the content of the shopping list\n")
+    print("6 - Exit the program\n")
    
 
     what_to_do_input = input("Please, enter the number of one of the options above:\n")
@@ -166,8 +191,10 @@ def select_what_to_do():
     elif what_to_do_input == "3":
         sum_shopping_price()
     elif what_to_do_input == "4":
-        clear_shopping_worksheet()
+        delete_row_in_shopping()
     elif what_to_do_input == "5":
+        clear_shopping_worksheet()
+    elif what_to_do_input == "6":
         exit_program()
 
 
