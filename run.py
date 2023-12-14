@@ -69,7 +69,7 @@ def print_shoe_info():
         my_brand = Brand(brand_name)
         my_brand.show_information()
     else:
-        print("Sorry, brand not found")
+        print("Sorry, brand not found.")
 
     select_what_to_do()
 
@@ -84,7 +84,7 @@ def copy_to_shopping():
         my_brand = Brand(brand_name)
         my_brand.append_row()
     else:
-        print("Sorry, brand not found\n")
+        print("Sorry, brand not found.\n")
 
     select_what_to_do()
 
@@ -105,6 +105,23 @@ def sum_shopping_price():
     shopping_sheet.update_cell(2, 4, total)
 
 
+def clear_shopping_worksheet():
+    """
+    Allows the user to clear the content of the shopping worksheet 
+    """
+    confirm_clearance = input("Do you want to empty your shopping list? (Y/N):\n")
+
+    if confirm_clearance == "Y":
+        print("Shopping list has been emptied.\n")
+        shopping_sheet.clear()
+    elif confirm_clearance == "N":
+        print("Great!\n")
+        select_what_to_do()
+    else:
+        print("INVALID INPUT, please, enter Y or N in capital letters.\n")
+        clear_shopping_worksheet()
+
+
 def exit_program():
     """
     Allows the users to exit the program
@@ -113,13 +130,13 @@ def exit_program():
     
     if confirm_exit == "Y":
         print("Exiting program...\n")
-        print("To start again, please, click the Run Program button above\n")
+        print("To start again, please, click the Run Program button above.\n")
         exit()
     elif confirm_exit == "N":
         print("Great!\n")
         select_what_to_do()
     else:
-        print("INVALID INPUT, please, enter Y or N in capital letters\n")
+        print("INVALID INPUT, please, enter Y or N in capital letters.\n")
         exit_program()
 
 
@@ -136,7 +153,8 @@ def select_what_to_do():
     print("1 - Shoe information by brand\n")
     print("2 - Add shoe to the shopping list\n")
     print("3 - Calculate the total price of your shopping list\n")
-    print("4 - Exit the program\n")
+    print("4 - Clear the content of the shopping list\n")
+    print("5 - Exit the program\n")
    
 
     what_to_do_input = input("Please, enter the number of one of the options above:\n")
@@ -148,6 +166,8 @@ def select_what_to_do():
     elif what_to_do_input == "3":
         sum_shopping_price()
     elif what_to_do_input == "4":
+        clear_shopping_worksheet()
+    elif what_to_do_input == "5":
         exit_program()
 
 
