@@ -20,14 +20,15 @@ SHEET = GSPREAD_CLIENT.open('shoes')
 shoe_list = SHEET.worksheet('shoe_list').get_all_values()
 shopping_sheet = SHEET.worksheet('shopping')
 
-# Define variables to target the columns in the spreadsheet to access them in the functions
-
+# Define variables to target the columns in the
+# spreadsheet to access them in the functions
 brands = SHEET.worksheet('shoe_list').col_values(1)
 descriptions = SHEET.worksheet('shoe_list').col_values(2)
 prices = SHEET.worksheet('shoe_list').col_values(3)
 
 # Global varaible to track whether the program is running for the first time
 program_has_run = False
+
 
 class Brand:
     """
@@ -59,12 +60,13 @@ class Brand:
 
 
 def print_shoe_info():
-    """ 
-    Allows the user to enter the name of the shoe brand and shows the information of the selected product
+    """
+    Allows the user to enter the name of the shoe brand
+    and shows the information of the selected product
     """
     brand_name = input("Please, enter a shoe brand (as seen on the spreadsheet): \n")
 
-    if(brand_name in SHEET.worksheet("shoe_list").col_values(1)):
+    if (brand_name in SHEET.worksheet("shoe_list").col_values(1)):
         my_brand = Brand(brand_name)
         my_brand.show_information()
     else:
@@ -72,9 +74,9 @@ def print_shoe_info():
         print("1. Try again\n")
         print("2. Return to main menu\n")
         print("3. Exit program\n")
-    
+
         choice = input("Enter your choice (1, 2 or 3): \n")
-    
+
         if choice == "1":
             print_shoe_info()
         elif choice == "2":
@@ -89,8 +91,9 @@ def print_shoe_info():
 
 
 def copy_to_shopping():
-    """ 
-    Allows the user to enter the name of the shoe brand and copies the information to the 'shopping' worksheet
+    """
+    Allows the user to enter the name of the shoe brand and
+    copies the information to the 'shopping' worksheet
     """
     brand_name = input("Please enter the shoe brand that you would like to buy (as seen on the spreadsheet): \n")
 
@@ -102,9 +105,9 @@ def copy_to_shopping():
         print("1. Try again\n")
         print("2. Return to main menu\n")
         print("3. Exit program\n")
-    
+
         choice = input("Enter your choice (1, 2 or 3): \n")
-    
+
         if choice == "1":
             copy_to_shopping()
         elif choice == "2":
@@ -119,7 +122,7 @@ def copy_to_shopping():
 
 
 def sum_shopping_price():
-    """ 
+    """
     Allows to sum the values in the price column into the shopping list
     """
     priece_values = (shopping_sheet.col_values(3))
@@ -127,24 +130,26 @@ def sum_shopping_price():
     priece_values_converted = []
     for priece_value in priece_values[1:]:
         priece_values_converted.append(int(priece_value))
-    
+
     total = sum(priece_values_converted)
     print(f"Total: {total}\n")
-    
+
     shopping_sheet.update_cell(2, 4, total)
 
     select_what_to_do()
 
+
 def delete_row_in_shopping():
     """
-    Allows the user to clear the content of one row in the shopping worksheet by brand name
+    Allows the user to clear the content of one
+    row in the shopping worksheet by brand name
     """
     brand_name = input("Please, enter the name of the brand that you want to delete from the shopping list: \n")
-    
+
     if brand_name in SHEET.worksheet("shopping").col_values(1):
         brand_column = shopping_sheet.col_values(1)
         row_index = brand_column.index(brand_name) + 1
-    
+
         confirm_deletion = input(f"Do you want to delete the brand {brand_name} form your shopping list? (Y/N):\n")
         confirm_deletion = confirm_deletion.upper()
         if confirm_deletion == "Y":
@@ -161,9 +166,9 @@ def delete_row_in_shopping():
         print("1. Try again\n")
         print("2. Return to main menu\n")
         print("3. Exit program\n")
-    
+
         choice = input("Enter your choice (1, 2 or 3): \n")
-    
+
         if choice == "1":
             delete_row_in_shopping()
         elif choice == "2":
@@ -177,7 +182,7 @@ def delete_row_in_shopping():
 
 def clear_shopping_worksheet():
     """
-    Allows the user to clear the content of the shopping worksheet 
+    Allows the user to clear the content of the shopping worksheet
     """
     confirm_clearance = input("Do you want to empty your shopping list? (Y/N):\n")
     confirm_clearance = confirm_clearance.upper()
@@ -194,6 +199,7 @@ def clear_shopping_worksheet():
         clear_shopping_worksheet()
 
     select_what_to_do()
+
 
 def exit_program():
     """
@@ -230,7 +236,6 @@ def select_what_to_do():
     print("4 - Delete one brand row form the shopping list\n")
     print("5 - Clear the content of the shopping list\n")
     print("6 - Exit the program\n")
-   
 
     what_to_do_input = input("Please, enter the number of one of the options above:\n")
 
@@ -249,5 +254,3 @@ def select_what_to_do():
 
 
 select_what_to_do()
-
-
