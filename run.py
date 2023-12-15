@@ -129,14 +129,16 @@ def delete_row_in_shopping():
     else:
         print("Sorry, brand not found.\n")
         print("1. Try again\n")
-        print("2. Exit program\n")
+        print("2. Return to main menu\n")
+        print("3. Exit program\n")
     
-        choice = input("Enter your choice (1 or 2): \n")
+        choice = input("Enter your choice (1, 2 or 3): \n")
     
         if choice == "1":
             delete_row_in_shopping()
         elif choice == "2":
-            print("Exiting the program.\n")
+            select_what_to_do()
+        elif choice == "3":
             exit_program()
         else:
             print("Invalid choice.\n")
@@ -161,6 +163,7 @@ def clear_shopping_worksheet():
         print("INVALID INPUT, please, ensure that you enter Y or N.\n")
         clear_shopping_worksheet()
 
+    select_what_to_do()
 
 def exit_program():
     """
