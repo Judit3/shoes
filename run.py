@@ -68,7 +68,22 @@ def print_shoe_info():
         my_brand = Brand(brand_name)
         my_brand.show_information()
     else:
-        print("Sorry, brand not found.")
+        print("Sorry, brand not found.\n")
+        print("1. Try again\n")
+        print("2. Return to main menu\n")
+        print("3. Exit program\n")
+    
+        choice = input("Enter your choice (1, 2 or 3): \n")
+    
+        if choice == "1":
+            print_shoe_info()
+        elif choice == "2":
+            select_what_to_do()
+        elif choice == "3":
+            exit_program()
+        else:
+            print("Invalid choice.\n")
+            select_what_to_do()
 
     select_what_to_do()
 
@@ -84,6 +99,21 @@ def copy_to_shopping():
         my_brand.append_row()
     else:
         print("Sorry, brand not found.\n")
+        print("1. Try again\n")
+        print("2. Return to main menu\n")
+        print("3. Exit program\n")
+    
+        choice = input("Enter your choice (1, 2 or 3): \n")
+    
+        if choice == "1":
+            copy_to_shopping()
+        elif choice == "2":
+            select_what_to_do()
+        elif choice == "3":
+            exit_program()
+        else:
+            print("Invalid choice.\n")
+            select_what_to_do()
 
     select_what_to_do()
 
