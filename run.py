@@ -26,7 +26,7 @@ brands = SHEET.worksheet('shoe_list').col_values(1)
 descriptions = SHEET.worksheet('shoe_list').col_values(2)
 prices = SHEET.worksheet('shoe_list').col_values(3)
 
-#Global varaible to track whether the program is running for the first time
+# Global varaible to track whether the program is running for the first time
 program_has_run = False
 
 class Brand:
@@ -103,18 +103,20 @@ def sum_shopping_price():
     
     shopping_sheet.update_cell(2, 4, total)
 
+    select_what_to_do()
 
 def delete_row_in_shopping():
     """
     Allows the user to clear the content of one row in the shopping worksheet by brand name
     """
-    brand_name = input("Please, enter the name on the brand you want to delete from your shopping list: \n")
+    brand_name = input("Please, enter the name of the brand that you want to delete from the shopping list: \n")
     
     if brand_name in SHEET.worksheet("shopping").col_values(1):
         brand_column = shopping_sheet.col_values(1)
         row_index = brand_column.index(brand_name) + 1
     
         confirm_deletion = input(f"Do you want to delete the brand {brand_name} form your shopping list? (Y/N):\n")
+        confirm_deletion = confirm_deletion.upper()
         if confirm_deletion == "Y":
             shopping_sheet.delete_rows(row_index)
             print(f"Row for brand {brand_name} has been deleted.\n")
@@ -122,7 +124,22 @@ def delete_row_in_shopping():
             print("Great!\n")
             select_what_to_do()
         else:
-            print("INVALID INPUT, please, enter Y or N in capital letters.\n")
+            print("INVALID INPUT, please, ensure that you enter Y or N.\n")
+            delete_row_in_shopping()
+    else:
+        print("Sorry, brand not found.\n")
+        print("1. Try again\n")
+        print("2. Exit program\n")
+    
+        choice = input("Enter your choice (1 or 2): \n")
+    
+        if choice == "1":
+            delete_row_in_shopping()
+        elif choice == "2":
+            print("Exiting the program.\n")
+            exit_program()
+        else:
+            print("Invalid choice.\n")
             delete_row_in_shopping()
 
 
@@ -131,7 +148,7 @@ def clear_shopping_worksheet():
     Allows the user to clear the content of the shopping worksheet 
     """
     confirm_clearance = input("Do you want to empty your shopping list? (Y/N):\n")
-
+    confirm_clearance = confirm_clearance.upper()
     if confirm_clearance == "Y":
         print("Shopping list has been emptied.\n")
         headings = shopping_sheet.row_values(1)
@@ -141,7 +158,7 @@ def clear_shopping_worksheet():
         print("Great!\n")
         select_what_to_do()
     else:
-        print("INVALID INPUT, please, enter Y or N in capital letters.\n")
+        print("INVALID INPUT, please, ensure that you enter Y or N.\n")
         clear_shopping_worksheet()
 
 
@@ -150,7 +167,8 @@ def exit_program():
     Allows the users to exit the program
     """
     confirm_exit = input("Confirm exit (Y/N):\n")
-    
+    confirm_exit = confirm_exit.upper()
+
     if confirm_exit == "Y":
         print("Exiting program...\n")
         print("To start again, please, click the Run Program button above.\n")
@@ -159,7 +177,7 @@ def exit_program():
         print("Great!\n")
         select_what_to_do()
     else:
-        print("INVALID INPUT, please, enter Y or N in capital letters.\n")
+        print("INVALID INPUT, please, ensure that you enter Y or N.\n")
         exit_program()
 
 
