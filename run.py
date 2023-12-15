@@ -222,7 +222,8 @@ def exit_program():
 
 def select_what_to_do():
     """
-    Allow users to select what they want to do among the functionalities of the program
+    Allow users to select what they want to do
+    among the functionalities of the program
     """
     global program_has_run
     if not program_has_run:
