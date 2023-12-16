@@ -1,8 +1,12 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SHOES
 
-Welcome,
+This is a program to analyse information hosted in a Google Sheet named shoes. The data set of the sheet was taken from Kaggle and modified to adapt it to the functionalities required. It is being created and an example of program designed to search into a data set for the desired information and to analyse the data within this sheet. The program was designed to be user-friendly and functional. This website was built as a third project of the program to become a Full Stack Software Development at Code Institute. The requirement was to build program using python.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![responsive website example image](assets/images/readme/responsive.png)
+
+---
+
+## CONTENTS
 
 ## Reminders
 
