@@ -161,8 +161,8 @@ The program was tested in the local terminal and the Code Institute Heroku termi
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 | Invalid inputs | An invalid input/choice should appear printed in the terminal and a new message should appear either repeating the previous question or redirecting to the amin menu | different kinds of invalid inputs entered in the terminal for each of the options provided in the menu | Redirected to the main menu or to the previous request. | Pass |
-| Functionality of the function select_what_to_do| run the function associated to the selected number in the main menu | enter each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
-| Functionality of the rest of functions | run the function associated to the selected number in the main menu | enter each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
+| Functionality of the function select_what_to_do| Run the function associated to the selected number in the main menu | Enter one at the time, each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
+| Functionality of the rest of functions | Run the function associated to the selected number in the main menu | Enter one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
 | --- | --- | --- | --- | --- |
 
  - - -
