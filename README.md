@@ -18,7 +18,7 @@ It was used [Lucid](https://www.lucidchart.com/) to create this diagram.
 
 The spread sheet was taken from [Kaggle](https://www.kaggle.com/datasets/justinpakzad/net-a-portermr-porter-fashion-dataset?select=mr-porter.csv/) website.
 
-This data set was imported to Google sheets and modified to fulfill the needs of the project. Here it can be found the link to the used [Google sheet shoes](https://docs.google.com/spreadsheets/d/1U53KSj0bVGPkZ_-dJj4_UMKLcY-6U65M0p_dOBjbdAo/edit#gid=58565426)
+This data set was imported to Google sheets and modified to fulfil the needs of the project. Here it can be found the link to the used [Google sheet shoes](https://docs.google.com/spreadsheets/d/1U53KSj0bVGPkZ_-dJj4_UMKLcY-6U65M0p_dOBjbdAo/edit#gid=58565426)
 
 ## Features
 
@@ -64,11 +64,11 @@ This program allows the user to perform the following actions by selecting them 
 
 ### Future implementations
 
-- Implement more filtering option like filter items by price range, material of the shoe, etc.
+Implement more filtering option like filter items by price range, material of the shoe, etc.
 
 ### Imported libraries
 
-It was imported gspread in order to be able to access the Google sheeet. It was imported Credentials from google.oauth2.service_account to use the creds.json file to set up authentication needed to access the created Google Cloud project.
+It was imported gspread in order to be able to access the Google sheet. It was imported Credentials from google.oauth2.service_account to use the creds.json file to set up authentication needed to access the created Google Cloud project.
 
 ## Technologies used
 
@@ -90,23 +90,23 @@ It was imported gspread in order to be able to access the Google sheeet. It was 
 ## Deployment
 
 The site was deployed to Heroku.
-The project was developed in CodeAnywhere application, where it was committed and pushed to GitHub. Then it was deplyed in Heroku via Github repository.
+The project was developed in CodeAnywhere application, where it was committed and pushed to GitHub. Then it was deployed in Heroku via Github repository.
 The project was deployed to Heroku following the steps for deployment video from the Love Sandwiches project, which are described below:
-    1. Open Heroku website
-    2. Log into account using own credentials
-    3. Select 'New' on the right side of page and then select 'Create New App'
-    4. Insert App Name - must be unique
-    5. Insert Region 
-    6. Select 'Create App'
-    7. From next page select 'Settings' tab
-    8. On next page scroll down and select 'Reveal Config Vars'
-    9. In box labelled 'KEY' enter 'CREDS'
+    1.  Open Heroku website
+    2.  Log into account using own credentials
+    3.  Select 'New' on the right side of page and then select 'Create New App'
+    4.  Insert App Name - must be unique
+    5.  Insert Region 
+    6.  Select 'Create App'
+    7.  From next page select 'Settings' tab
+    8.  On next page scroll down and select 'Reveal Config Vars'
+    9.  In box labelled 'KEY' enter 'CREDS'
     10. In the box labelled 'VALUE' copy and paste content of 'creds.json' file from codeanywhere workspace for the project
     11. Click 'Add'
-    12. In the next box labelelled 'KEY' insert 'PORT'
+    12. In the next box labelled 'KEY' insert 'PORT'
     13. In the box labelled 'VALUE' insert 8000
     14. Click 'Add'
-    15. Scroll down into the page and in the section lablled 'Buildpacks' select 'Add buildpack'
+    15. Scroll down into the page and in the section labelled 'Buildpacks' select 'Add buildpack'
     16. Select the box labelled 'python' and then select 'Save Changes'
     17. Select 'Add buildpack' once again and select the box labelled 'nodejs' and select 'Save Changes'<br>
          NOTE: Buildpacks must be in correct order, Python on top and Nodejs below
@@ -130,26 +130,48 @@ It was used [PEP8](https://pep8ci.herokuapp.com/#) to test the written code with
 
 ![PEP8 test image](assets/images/readme/pep8ci-test.png)
 
-The only error that appears is "E501 line too long" for print or input statements as weel as for comments within the code, not affecting the performance of the program.
+The only error that appears is "E501 line too long" for print or input statements as well as for comments within the code, not affecting the performance of the program.
 
-- Tested in the local terminal and the Code Institute Heroku terminal.
+The program was tested in the local terminal and the Code Institute Heroku terminal.
 
 ### Manual testing
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
-| Invalid imputs | An invalid imput/choice should appear printed in the terminal and a new message should appear either repeating the previous question or redirecting to the amin menu | different kinds of invalid imputs entered in the terminal for each of the options provided in the menu | Redirected to the main menu or to the previous request. | Pass |
+| Invalid inputs | An invalid input/choice should appear printed in the terminal and a new message should appear either repeating the previous question or redirecting to the amin menu | different kinds of invalid inputs entered in the terminal for each of the options provided in the menu | Redirected to the main menu or to the previous request. | Pass |
 | Functionality of the function select_what_to_do| run the function associated to the selected number in the main menu | enter each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
 | Functionality of the rest of functions | run the function associated to the selected number in the main menu | enter each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
 | --- | --- | --- | --- | --- |
 
  - - -
 
+Following devices and browsers were used:
+
+Laptop:
+
+* Macbook Pro 
+  
+Browser:
+
+* Google Chrome
+
 ### Bugs
 
 No bugs were found.
 
 ## Credits
+
+- The spreadsheet for this app was imported from [Kaggle](https://www.kaggle.com/) and can be found [here](https://www.kaggle.com/datasets/justinpakzad/net-a-portermr-porter-fashion-dataset)
+- The link to the spreadsheet used for the project is [here](https://docs.google.com/spreadsheets/d/1U53KSj0bVGPkZ_-dJj4_UMKLcY-6U65M0p_dOBjbdAo/edit#gid=58565426)
+
+
+### Content
+
+Love Sandwiches was used as reference to plan the project and set it up. Content was written and created by the developer with inspiration from other CodeInstitute student projects. 
+
+### Acknowledgments
+
+My mentor Luke for continuous support and helpful feedback.
 
 
