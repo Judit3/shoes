@@ -1,7 +1,3 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -92,7 +88,7 @@ def print_shoe_info():
 
 def copy_to_shopping():
     """
-    Allows the user to enter the name of the shoe brand and
+/copy-to-shopping.png    Allows the user to enter the name of the shoe brand and
     copies the information to the 'shopping' worksheet
     """
     brand_name = input("Please enter the shoe brand that you would like to buy (as seen on the spreadsheet): \n")
@@ -222,7 +218,8 @@ def exit_program():
 
 def select_what_to_do():
     """
-    Allow users to select what they want to do among the functionalities of the program
+    Allow users to select what they want to do
+    among the functionalities of the program
     """
     global program_has_run
     if not program_has_run:

@@ -1,27 +1,130 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SHOES
 
-Welcome,
+This is a program to analyse information hosted in a Google Sheet named shoes. The data set of the sheet was taken from Kaggle and modified to adapt it to the functionalities required. It is being created and an example of program designed to search into a data set for the desired information and to analyse the data within this sheet. The program was designed to be user-friendly and functional. This website was built as a third project of the program to become a Full Stack Software Development at Code Institute. The requirement was to build program using python.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![responsive website example image](assets/images/readme/responsive.png)
 
-## Reminders
+---
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## CONTENTS
 
-## Creating the Heroku app
+## Planning of the project
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+It was followed the next diagram for the creation of the program: 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![flux diagram image](assets/images/readme/proccess.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+It was used [Lucid](https://www.lucidchart.com/) to create this diagram.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The spread sheet was taken from [Kaggle](https://www.kaggle.com/datasets/justinpakzad/net-a-portermr-porter-fashion-dataset?select=mr-porter.csv/) website.
 
-Connect your GitHub repository and deploy as normal.
+This data set was imported to Google sheets and modified to fulfill the needs of the project. Here it can be found the link to the used [Google sheet shoes](https://docs.google.com/spreadsheets/d/1U53KSj0bVGPkZ_-dJj4_UMKLcY-6U65M0p_dOBjbdAo/edit#gid=58565426)
+
+## Features
+
+### How to use the program
+
+- The user type in commands via terminal following the instructions given in it, as shown in the image below, and using the numeric index of the options provided.
+
+![Terminal image](assets/images/readme/heroku-app.png)
+
+### Functions
+
+Each function has a description of their functionality.
+
+This program allows the user to perform the following actions by selecting them in the terminal menu:
+
+- Select what they want to do from the menu in the terminal.
+
+![select_what_to_do function image](assets/images/readme/select-what-to-do.png)
+
+- Search for shoe by brand name and get information of the item from the Google sheet.
+
+![print_shoe_info function image](assets/images/readme/print-shoe-info.png)
+
+- Copy selected data to the Google sheet to create a shopping list.
+
+![copy_to_shopping function image](assets/images/readme/copy-to-shopping.png)
+
+- Sum the price of the items located in the shopping list.
+
+![sum_shopping_price function image](assets/images/readme/sum-shopping-price.png)
+
+- Delete an item in the shopping list.
+
+![delete_row_in_shopping function image](assets/images/readme/delete-row-in-shopping.png)
+
+- Clear the shopping list.
+
+![clear_shopping_worksheet function image](assets/images/readme/clear-shopping-worksheet.png)
+
+- Exit the program.
+
+![exit_program function image](assets/images/readme/exit-program.png)
+
+### Future implementations
+
+- Implement more filtering option like filter items by price range, material of the shoe, etc.
+
+### Imported libraries
+
+It was imported gspread in order to be able to access the Google sheeet. It was imported Credentials from google.oauth2.service_account to use the creds.json file to set up authentication needed to access the created Google Cloud project.
+
+## Technologies used
+
+**GitHub** – storage<br>
+**Codeanywhere** – IDE used to write, edit, commit and push the code to GitHub<br>
+**Heroku** – deployment<br>
+**Am I Responsive?** – check responsiveness of the website<br>
+**Google Sheet** – spread sheet host<br>
+**Python** - build the program and python 3 via terminal to test the program<br>
+**js** - code included in the template used, provided by CodeInstitute<br>
+**Google Chrome** - test the program<br>
+**LucidChart** - create the flux diagram<br>
+
+### Languages used
+
+- Python
+- Javascript
+
+## Deployment
+
+The site was deployed to Heroku.
+The project was developed in CodeAnywhere application, where it was committed and pushed to GitHub. Then it was deplyed in Heroku via Github repository.
+The project was deployed to Heroku following the steps for deployment video from the Love Sandwiches project, which are described below:
+    1.- Open Heroku website
+    2.- Log into account using own credentials
+    3.- Select 'New' on the right side of page and then select 'Create New App'
+    4.- Insert App Name - must be unique
+    5.- Insert Region 
+    6.- Select 'Create App'
+    7.- From next page select 'Settings' tab
+    8.- On next page scroll down and select 'Reveal Config Vars'
+    9.- In box labelled 'KEY' enter 'CREDS'
+    10.- In the box labelled 'VALUE' copy and paste content of 'creds.json' file from codeanywhere workspace for the project
+    11.- Click 'Add'
+    12.- In the next box labelelled 'KEY' insert 'PORT'
+    13.- In the box labelled 'VALUE' insert 8000
+    14.- Click 'Add'
+    15.- Scroll down into the page and in the section lablled 'Buildpacks' select 'Add buildpack'
+    16.- Select the box labelled 'python' and then select 'Save Changes'
+    17.- Select 'Add buildpack' once again and select the box labelled 'nodejs' and select 'Save Changes'
+         NOTE: Buildpacks must be in correct order, Python on top and Nodejs below
+    18.- Scroll up to top of the page and select the tab labelled 'Deploy'
+    19.- In 'Deployment Method' section select 'GitHub'
+    20.- Below select 'Connect to GitHub'
+    21.- Search for the GitHub repository name in the 'repo-name' box and select 'Search' and when the name appears select 'Connect'
+    22.- Scroll down to 'Manual Deploys' and select 'Deploy Branch' 
+         Automatic Deploys may also be used
+    24.- Below 'Deploy Branch' the app can be seen to be created
+    25.- A button saying 'View' will appear when complete
+    26.- Select View and the app will open in a new tab where mock terminal can be seen
+
+The live link can be found here - https://shoes-772087c4c0ff.herokuapp.com/
+
+## Testing
+
+
 
 ## Constraints
 
