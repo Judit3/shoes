@@ -12,7 +12,7 @@ This is a program to analyse information hosted in a Google Sheet named shoes. T
 
 It was followed the next diagram for the creation of the program: 
 
-![flux diagram image](assets/images/readme/proccess.png)
+![Flow chart image](assets/images/readme/process.png)
 
 It was used [Lucid](https://www.lucidchart.com/) to create this diagram.
 
@@ -78,9 +78,9 @@ It was imported gspread in order to be able to access the Google sheeet. It was 
 **Am I Responsive?** – check responsiveness of the website<br>
 **Google Sheet** – spread sheet host<br>
 **Python** - build the program and python 3 via terminal to test the program<br>
-**js** - code included in the template used, provided by CodeInstitute<br>
+**Javascript** - code included in the template used, provided by CodeInstitute<br>
 **Google Chrome** - test the program<br>
-**LucidChart** - create the flux diagram<br>
+**LucidChart** - create the flow chart<br>
 
 ### Languages used
 
@@ -124,7 +124,11 @@ The live link can be found here - https://shoes-772087c4c0ff.herokuapp.com/
 
 ## Testing
 
+### Validation testing
 
+It was used [Pep8ci](https://pep8ci.herokuapp.com/#) to test the written code with the following result:
+
+![Pep8ci test image](assets/images/readme/exit-program.png)
 
 ## Constraints
 
