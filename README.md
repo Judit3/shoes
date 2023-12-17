@@ -8,6 +8,27 @@ This is a program to analyse information hosted in a Google Sheet named shoes. T
 
 ## CONTENTS
 
+- [SHOES](#shoes)
+  - [CONTENTS](#contents)
+  - [Planning of the project](#planning-of-the-project)
+  - [Features](#features)
+    - [How to use the program](#how-to-use-the-program)
+    - [Functions](#functions)
+    - [Future implementations](#future-implementations)
+    - [Imported libraries](#imported-libraries) 
+  - [Technologies used](#technologies-used)
+    - [Languages used](#languages-used)
+  - [Deployment](#deployment)
+  - [Testing](#testing)
+    - [Validation testing](#validation-testing)
+    - [Manual testing](#manual-testing)
+    - [Bugs](#bugs)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Acknowledgments](#acknowledgments)
+
+---
+
 ## Planning of the project
 
 It was followed the next diagram for the creation of the program: 
@@ -92,33 +113,33 @@ It was imported gspread in order to be able to access the Google sheet. It was i
 The site was deployed to Heroku.
 The project was developed in CodeAnywhere application, where it was committed and pushed to GitHub. Then it was deployed in Heroku via Github repository.
 The project was deployed to Heroku following the steps for deployment video from the Love Sandwiches project, which are described below:
-    1.  Open Heroku website
-    2.  Log into account using own credentials
-    3.  Select 'New' on the right side of page and then select 'Create New App'
-    4.  Insert App Name - must be unique
-    5.  Insert Region 
-    6.  Select 'Create App'
-    7.  From next page select 'Settings' tab
-    8.  On next page scroll down and select 'Reveal Config Vars'
-    9.  In box labelled 'KEY' enter 'CREDS'
-    10. In the box labelled 'VALUE' copy and paste content of 'creds.json' file from codeanywhere workspace for the project
-    11. Click 'Add'
-    12. In the next box labelled 'KEY' insert 'PORT'
-    13. In the box labelled 'VALUE' insert 8000
-    14. Click 'Add'
-    15. Scroll down into the page and in the section labelled 'Buildpacks' select 'Add buildpack'
-    16. Select the box labelled 'python' and then select 'Save Changes'
-    17. Select 'Add buildpack' once again and select the box labelled 'nodejs' and select 'Save Changes'<br>
-         NOTE: Buildpacks must be in correct order, Python on top and Nodejs below
-    18. Scroll up to top of the page and select the tab labelled 'Deploy'
-    19. In 'Deployment Method' section select 'GitHub'
-    20. Below select 'Connect to GitHub'
-    21. Search for the GitHub repository name in the 'repo-name' box and select 'Search' and when the name appears select 'Connect'
-    22. Scroll down to 'Manual Deploys' and select 'Deploy Branch'<br> 
-         Automatic Deploys may also be used
-    24. Below 'Deploy Branch' the app can be seen to be created
-    25. A button saying 'View' will appear when complete
-    26. Select View and the app will open in a new tab where mock terminal can be seen
+1.  Open Heroku website
+2.  Log into account using own credentials
+3.  Select 'New' on the right side of page and then select 'Create New App'
+4.  Insert App Name - must be unique
+5.  Insert Region 
+6.  Select 'Create App'
+7.  From next page select 'Settings' tab
+8.  On next page scroll down and select 'Reveal Config Vars'
+9.  In box labelled 'KEY' enter 'CREDS'
+10. In the box labelled 'VALUE' copy and paste content of 'creds.json' file from codeanywhere workspace for the project
+11. Click 'Add'
+12. In the next box labelled 'KEY' insert 'PORT'
+13. In the box labelled 'VALUE' insert 8000
+14. Click 'Add'
+15. Scroll down into the page and in the section labelled 'Buildpacks' select 'Add buildpack'
+16. Select the box labelled 'python' and then select 'Save Changes'
+17. Select 'Add buildpack' once again and select the box labelled 'nodejs' and select 'Save Changes'<br>
+    NOTE: Buildpacks must be in correct order, Python on top and Nodejs below
+18. Scroll up to top of the page and select the tab labelled 'Deploy'
+19. In 'Deployment Method' section select 'GitHub'
+20. Below select 'Connect to GitHub'
+21. Search for the GitHub repository name in the 'repo-name' box and select 'Search' and when the name appears select 'Connect'
+22. Scroll down to 'Manual Deploys' and select 'Deploy Branch'<br> 
+    Automatic Deploys may also be used
+24. Below 'Deploy Branch' the app can be seen to be created
+25. A button saying 'View' will appear when complete
+26. Select View and the app will open in a new tab where mock terminal can be seen
 
 The live link can be found here - https://shoes-772087c4c0ff.herokuapp.com/
 
@@ -150,11 +171,11 @@ Following devices and browsers were used:
 
 Laptop:
 
-* Macbook Pro 
+- Macbook Pro 
   
 Browser:
 
-* Google Chrome
+- Google Chrome
 
 ### Bugs
 
