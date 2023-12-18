@@ -31,9 +31,10 @@ This is a program to analyse information hosted in a Google Sheet named shoes. T
 
 ## Planning of the project
 
-It was followed the next diagram for the creation of the program: 
+It was followed the next diagrams for the creation of the program: 
 
 ![Flow chart image](assets/images/readme/process.png)
+![Scheme functions image](assets/images/readme/scheme-functions.png)
 
 It was used [Lucid](https://www.lucidchart.com/) to create this diagram.
 
