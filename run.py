@@ -61,6 +61,9 @@ def print_shoe_info():
     and shows the information of the selected product
     """
     brand_name = input("Please, enter a shoe brand (as seen on the spreadsheet): \n")
+    brand_name = brand_name.upper()
+    print('__________________________________')
+    print('')
 
     if (brand_name in SHEET.worksheet("shoe_list").col_values(1)):
         my_brand = Brand(brand_name)
@@ -82,16 +85,21 @@ def print_shoe_info():
         else:
             print("Invalid choice.\n")
             select_what_to_do()
-
+    
+    print('__________________________________')
+    print('')
     select_what_to_do()
 
 
 def copy_to_shopping():
     """
-/copy-to-shopping.png    Allows the user to enter the name of the shoe brand and
+    Allows the user to enter the name of the shoe brand and
     copies the information to the 'shopping' worksheet
     """
     brand_name = input("Please enter the shoe brand that you would like to buy (as seen on the spreadsheet): \n")
+    brand_name = brand_name.upper()
+    print('__________________________________')
+    print('')
 
     if brand_name in SHEET.worksheet("shoe_list").col_values(1):
         my_brand = Brand(brand_name)
@@ -103,6 +111,8 @@ def copy_to_shopping():
         print("3. Exit program\n")
 
         choice = input("Enter your choice (1, 2 or 3): \n")
+        print('__________________________________')
+        print('')
 
         if choice == "1":
             copy_to_shopping()
@@ -114,6 +124,8 @@ def copy_to_shopping():
             print("Invalid choice.\n")
             select_what_to_do()
 
+    print('__________________________________')
+    print('')
     select_what_to_do()
 
 
@@ -132,6 +144,8 @@ def sum_shopping_price():
 
     shopping_sheet.update_cell(2, 4, total)
 
+    print('__________________________________')
+    print('')
     select_what_to_do()
 
 
@@ -141,6 +155,9 @@ def delete_row_in_shopping():
     row in the shopping worksheet by brand name
     """
     brand_name = input("Please, enter the name of the brand that you want to delete from the shopping list: \n")
+    brand_name = brand_name.upper()
+    print('__________________________________')
+    print('')
 
     if brand_name in SHEET.worksheet("shopping").col_values(1):
         brand_column = shopping_sheet.col_values(1)
@@ -148,6 +165,9 @@ def delete_row_in_shopping():
 
         confirm_deletion = input(f"Do you want to delete the brand {brand_name} form your shopping list? (Y/N):\n")
         confirm_deletion = confirm_deletion.upper()
+        print('__________________________________')
+        print('')
+
         if confirm_deletion == "Y":
             shopping_sheet.delete_rows(row_index)
             print(f"Row for brand {brand_name} has been deleted.\n")
@@ -164,6 +184,8 @@ def delete_row_in_shopping():
         print("3. Exit program\n")
 
         choice = input("Enter your choice (1, 2 or 3): \n")
+        print('__________________________________')
+        print('')
 
         if choice == "1":
             delete_row_in_shopping()
@@ -175,6 +197,9 @@ def delete_row_in_shopping():
             print("Invalid choice.\n")
             delete_row_in_shopping()
 
+    print('__________________________________')
+    print('')
+    select_what_to_do()
 
 def clear_shopping_worksheet():
     """
@@ -182,6 +207,9 @@ def clear_shopping_worksheet():
     """
     confirm_clearance = input("Do you want to empty your shopping list? (Y/N):\n")
     confirm_clearance = confirm_clearance.upper()
+    print('__________________________________')
+    print('')
+
     if confirm_clearance == "Y":
         print("Shopping list has been emptied.\n")
         headings = shopping_sheet.row_values(1)
@@ -194,6 +222,8 @@ def clear_shopping_worksheet():
         print("INVALID INPUT, please, ensure that you enter Y or N.\n")
         clear_shopping_worksheet()
 
+    print('__________________________________')
+    print('')
     select_what_to_do()
 
 
@@ -203,6 +233,8 @@ def exit_program():
     """
     confirm_exit = input("Confirm exit (Y/N):\n")
     confirm_exit = confirm_exit.upper()
+    print('__________________________________')
+    print('')
 
     if confirm_exit == "Y":
         print("Exiting program...\n")
@@ -235,6 +267,8 @@ def select_what_to_do():
     print("6 - Exit the program\n")
 
     what_to_do_input = input("Please, enter the number of one of the options above:\n")
+    print('__________________________________')
+    print('')
 
     if what_to_do_input == "1":
         print_shoe_info()
@@ -248,6 +282,12 @@ def select_what_to_do():
         clear_shopping_worksheet()
     elif what_to_do_input == "6":
         exit_program()
+    else:
+        print("INVALID INPUT, please, ensure that you enter one of the numbers from above.\n")
+        select_what_to_do()
+    
+    print('__________________________________')
+    print('')
 
 
 select_what_to_do()
