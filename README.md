@@ -162,12 +162,12 @@ The program was tested in the local terminal and the CodeInstitute Heroku termin
 |  |  |  |  |  |
 | Invalid inputs | An invalid input/choice should appear printed in the terminal and a new message should appear either repeating the previous question or redirecting to the main menu | Different kinds of invalid inputs entered in the terminal for each of the options provided in the menu | Redirected to the main menu or to the previous request. | Pass |
 | Functionality of the function select_what_to_do| Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
-| Functionality of print_shoe_info | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
-| Functionality of copy_to_shopping | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
-| Functionality of sum_shopping_price | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
-| Functionality of delete_row_in_shopping | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
-| Functionality of clear_shopping_worksheet | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
-| Functionality of exit_program | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of print_shoe_info | Print the information of the selected shoe | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of copy_to_shopping | Copy the selected shoe to the shopping list| Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of sum_shopping_price | Sum the price of the shoes located in the shopping list | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of delete_row_in_shopping | Ask for a confirmation of the choice and delete the selectec shoe from the shopping list, otherwishe run the function associated to the selected choice | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of clear_shopping_worksheet | Ask for a confirmation of the choice and clear the shopping list, otherwishe run the function associated to the selected choice | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of exit_program | Ask for a confirmation of the choice and if confirmed exit the program, otherwishe run the function associated to the selected choice | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
 | --- | --- | --- | --- | --- |
 
  - - -
