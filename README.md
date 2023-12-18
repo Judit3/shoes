@@ -83,6 +83,10 @@ This program allows the user to perform the following actions by selecting them 
 
 ![exit_program function image](assets/images/readme/exit-program.png)
 
+- Show not found message.
+
+![show-not-found-message function image](assets/images/readme/show-not-found-message.png)
+
 ### Future implementations
 
 Implement more filtering option like filter items by price range, material of the shoe, etc.
@@ -168,6 +172,7 @@ The program was tested in the local terminal and the CodeInstitute Heroku termin
 | Functionality of delete_row_in_shopping | Ask for a confirmation of the choice and delete the selectec shoe from the shopping list, otherwishe run the function associated to the selected choice | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
 | Functionality of clear_shopping_worksheet | Ask for a confirmation of the choice and clear the shopping list, otherwishe run the function associated to the selected choice | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
 | Functionality of exit_program | Ask for a confirmation of the choice and if confirmed exit the program, otherwishe run the function associated to the selected choice | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of show_not_found_message | Displays a not found message | Selected function run correctly | Pass |
 | --- | --- | --- | --- | --- |
 
  - - -

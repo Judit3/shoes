@@ -70,14 +70,7 @@ def print_shoe_info():
         my_brand = Brand(brand_name)
         my_brand.show_information()
     else:
-        print("Sorry, brand not found.\n")
-        print("1. Try again\n")
-        print("2. Return to main menu\n")
-        print("3. Exit program\n")
-
-        choice = input("Enter your choice (1, 2 or 3): \n")
-        print('__________________________________')
-        print('')
+        choice = show_not_found_message()
 
         if choice == "1":
             print_shoe_info()
@@ -108,14 +101,7 @@ def copy_to_shopping():
         my_brand = Brand(brand_name)
         my_brand.append_row()
     else:
-        print("Sorry, brand not found.\n")
-        print("1. Try again\n")
-        print("2. Return to main menu\n")
-        print("3. Exit program\n")
-
-        choice = input("Enter your choice (1, 2 or 3): \n")
-        print('__________________________________')
-        print('')
+        choice = show_not_found_message()
 
         if choice == "1":
             copy_to_shopping()
@@ -181,14 +167,7 @@ def delete_row_in_shopping():
             print("INVALID INPUT, please, ensure that you enter Y or N.\n")
             delete_row_in_shopping()
     else:
-        print("Sorry, brand not found.\n")
-        print("1. Try again\n")
-        print("2. Return to main menu\n")
-        print("3. Exit program\n")
-
-        choice = input("Enter your choice (1, 2 or 3): \n")
-        print('__________________________________')
-        print('')
+        choice = show_not_found_message()
 
         if choice == "1":
             delete_row_in_shopping()
@@ -249,6 +228,19 @@ def exit_program():
     else:
         print("INVALID INPUT, please, ensure that you enter Y or N.\n")
         exit_program()
+
+
+def show_not_found_message():
+    print("Sorry, brand not found.\n")
+    print("1. Try again\n")
+    print("2. Return to main menu\n")
+    print("3. Exit program\n")
+
+    choice = input("Enter your choice (1, 2 or 3): \n")
+    print('__________________________________')
+    print('')
+
+    return choice
 
 
 def select_what_to_do():
