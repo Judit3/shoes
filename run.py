@@ -23,6 +23,7 @@ descriptions = SHEET.worksheet('shoe_list').col_values(2)
 prices = SHEET.worksheet('shoe_list').col_values(3)
 
 # Global varaible to track whether the program is running for the first time
+# and show a welcome message to first time users
 program_has_run = False
 
 
@@ -75,6 +76,8 @@ def print_shoe_info():
         print("3. Exit program\n")
 
         choice = input("Enter your choice (1, 2 or 3): \n")
+        print('__________________________________')
+        print('')
 
         if choice == "1":
             print_shoe_info()
@@ -85,7 +88,7 @@ def print_shoe_info():
         else:
             print("Invalid choice.\n")
             select_what_to_do()
-    
+
     print('__________________________________')
     print('')
     select_what_to_do()
@@ -285,7 +288,7 @@ def select_what_to_do():
     else:
         print("INVALID INPUT, please, ensure that you enter one of the numbers from above.\n")
         select_what_to_do()
-    
+
     print('__________________________________')
     print('')
 
