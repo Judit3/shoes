@@ -1,6 +1,6 @@
 # SHOES
 
-This is a program to analyse information hosted in a Google Sheet named shoes. The data set of the sheet was taken from Kaggle and modified to adapt it to the functionalities required. It is being created and an example of program designed to search into a data set for the desired information and to analyse the data within this sheet. The program was designed to be user-friendly and functional. This website was built as a third project of the program to become a Full Stack Software Development at Code Institute. The requirement was to build program using python.
+This is a program to analyse information hosted in a Google Sheet named shoes. The data set of the sheet was taken from Kaggle and modified to adapt it to the functionalities required. It is being created as an example of program designed to search into a data set for the desired information and to analyse the data within this sheet. The program was designed to be user-friendly and functional. This program was built as a third project of the agenda to become a Full Stack Software Development at Code Institute. The requirement was to build program using python.
 
 ![responsive website example image](assets/images/readme/responsive.png)
 
@@ -55,7 +55,7 @@ Each function has a description of their functionality.
 
 This program allows the user to perform the following actions by selecting them in the terminal menu:
 
-- Select what they want to do from the menu in the terminal.
+- Select what they want to do from the options given within the menu in the terminal.
 
 ![select_what_to_do function image](assets/images/readme/select-what-to-do.png)
 
@@ -71,7 +71,7 @@ This program allows the user to perform the following actions by selecting them 
 
 ![sum_shopping_price function image](assets/images/readme/sum-shopping-price.png)
 
-- Delete an item in the shopping list.
+- Delete an item from the shopping list.
 
 ![delete_row_in_shopping function image](assets/images/readme/delete-row-in-shopping.png)
 
@@ -98,7 +98,7 @@ It was imported gspread in order to be able to access the Google sheet. It was i
 **Heroku** – deployment<br>
 **Am I Responsive?** – check responsiveness of the website<br>
 **Google Sheet** – spread sheet host<br>
-**Python** - build the program and python 3 via terminal to test the program<br>
+**Python** - build the program, python 3 via terminal to test the program<br>
 **Javascript** - code included in the template used, provided by CodeInstitute<br>
 **Google Chrome** - test the program<br>
 **LucidChart** - create the flow chart<br>
@@ -112,16 +112,16 @@ It was imported gspread in order to be able to access the Google sheet. It was i
 
 The site was deployed to Heroku.
 The project was developed in CodeAnywhere application, where it was committed and pushed to GitHub. Then it was deployed in Heroku via Github repository.
-The project was deployed to Heroku following the steps for deployment video from the Love Sandwiches project, which are described below:
+The project was deployed to Heroku following the steps for deployment from the video of the Love Sandwiches project (CopdeInstitute), which are described below:
 1.  Open Heroku website
-2.  Log into account using own credentials
+2.  Log into the account using your own credentials
 3.  Select 'New' on the right side of page and then select 'Create New App'
 4.  Insert App Name - must be unique
 5.  Insert Region 
 6.  Select 'Create App'
-7.  From next page select 'Settings' tab
-8.  On next page scroll down and select 'Reveal Config Vars'
-9.  In box labelled 'KEY' enter 'CREDS'
+7.  From the next page select 'Settings' tab
+8.  On the next page scroll down and select 'Reveal Config Vars'
+9.  In the box labelled 'KEY' enter 'CREDS'
 10. In the box labelled 'VALUE' copy and paste content of 'creds.json' file from codeanywhere workspace for the project
 11. Click 'Add'
 12. In the next box labelled 'KEY' insert 'PORT'
@@ -131,14 +131,14 @@ The project was deployed to Heroku following the steps for deployment video from
 16. Select the box labelled 'python' and then select 'Save Changes'
 17. Select 'Add buildpack' once again and select the box labelled 'nodejs' and select 'Save Changes'<br>
     NOTE: Buildpacks must be in correct order, Python on top and Nodejs below
-18. Scroll up to top of the page and select the tab labelled 'Deploy'
-19. In 'Deployment Method' section select 'GitHub'
-20. Below select 'Connect to GitHub'
+18. Scroll up to the top of the page and select the tab labelled 'Deploy'
+19. In the 'Deployment Method' section select 'GitHub'
+20. Below, select 'Connect to GitHub'
 21. Search for the GitHub repository name in the 'repo-name' box and select 'Search' and when the name appears select 'Connect'
 22. Scroll down to 'Manual Deploys' and select 'Deploy Branch'<br> 
     Automatic Deploys may also be used
 24. Below 'Deploy Branch' the app can be seen to be created
-25. A button saying 'View' will appear when complete
+25. A button saying 'View' will appear when completed
 26. Select View and the app will open in a new tab where mock terminal can be seen
 
 The live link can be found here - https://shoes-772087c4c0ff.herokuapp.com/
@@ -153,7 +153,7 @@ It was used [PEP8](https://pep8ci.herokuapp.com/#) to test the written code with
 
 The only error that appears is "E501 line too long" for print or input statements as well as for comments within the code, not affecting the performance of the program.
 
-The program was tested in the local terminal and the Code Institute Heroku terminal.
+The program was tested in the local terminal and the CodeInstitute Heroku terminal.
 
 ### Manual testing
 
@@ -161,8 +161,8 @@ The program was tested in the local terminal and the Code Institute Heroku termi
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 | Invalid inputs | An invalid input/choice should appear printed in the terminal and a new message should appear either repeating the previous question or redirecting to the amin menu | Different kinds of invalid inputs entered in the terminal for each of the options provided in the menu | Redirected to the main menu or to the previous request. | Pass |
-| Functionality of the function select_what_to_do| Run the function associated to the selected number in the main menu | Enter one at the time, each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
-| Functionality of the rest of functions | Run the function associated to the selected number in the main menu | Enter one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
+| Functionality of the function select_what_to_do| Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Desired function run correctly | Pass |
+| Functionality of the rest of functions | Run the function associated to the selected number in the main menu | Enter, one at the time, each of the numbers of the main menu in the terminal | Selected function run correctly | Pass |
 | --- | --- | --- | --- | --- |
 
  - - -
